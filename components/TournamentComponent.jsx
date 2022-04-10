@@ -3,11 +3,9 @@ import React from "react";
 import tw from "tailwind-react-native-classnames";
 import { AntDesign, EvilIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import useTournamentName from "../useTournamentName.jsx";
 
 const TournamentComponent = ({ title }) => {
   const navigation = useNavigation();
-  const [tournamentName, setTournamentName] = useTournamentName();
   return (
     <View style={tw`rounded-lg m-3`}>
       <View
@@ -71,7 +69,6 @@ const TournamentComponent = ({ title }) => {
           </View>
           <TouchableOpacity
             onPress={() => {
-              setTournamentName(title);
               navigation.navigate("MatchData");
             }}
             style={[

@@ -10,11 +10,8 @@ import React from "react";
 import MatchComponent from "../components/MatchComponent";
 import tw from "tailwind-react-native-classnames";
 import { Feather, AntDesign } from "@expo/vector-icons";
-import useTournamentName from "../useTournamentName.jsx";
 
 const MatchDataScreen = () => {
-  const [tournamentName, setTournamentName] = useTournamentName();
-  console.log(tournamentName);
   return (
     <View style={tw`flex-1 bg-gray-50`}>
       <Header title={"Match Details"} />
